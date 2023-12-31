@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.sky{
+  height: 40%;
+  background: skyblue;
+  
+  position: relative;
+}
+
+.cloud{
+  position: absolute;
+  bottom: 30rem;
+  left: 5rem;
+
+  animation:  cloud 120s;
+}
+
+.cloud2{
+  position: absolute;
+  bottom: 27rem;
+
+  opacity: 0.3;
+  animation: cloud 80s;
+}
+
+.grass{
+  height: 30%;
+  background: seagreen;
+}
+
+.road{
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+  position: relative;
+}
+
+.mario{
+  position: absolute;
+  bottom: 110px;
+
+  animation: mario 6s infinite;
+}
+
+.luigi{
+  position: absolute;
+  top: 50px;
+  right: -120px;
+
+  animation: luigi 8s;
+}
+
+.lines{
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+@keyframes cloud {
+  0%{
+    transform: translateX(0px);
+  }
+  100%{
+    transform: translateX(800px);
+  }
+}
+@keyframes mario {
+  0%{
+    transform: translateX(-250px);
+  }
+  100%{
+    transform: translateX(900px);
+  }
+}
+@keyframes luigi {
+  0%{
+    transform: translateX(500px);
+  }
+  100%{
+    transform: translateX(-1000px);
+  }
+}
